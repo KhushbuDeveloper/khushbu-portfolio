@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Dark theme (default) */
+  --color-ink: #0b0f14;
+  --color-surface: #111826;
+  --color-surface-2: #161f2e;
+  --color-line: #223047;
+  --color-muted: #8b98ab;
+  --color-accent: #22d3b8;
+  --color-accent-2: #7c9dfc;
+  --color-fg: #e7ebf1;
+}
+
+/* Light theme — overrides the same tokens, so every utility follows */
+:root[data-theme="light"] {
+  --color-ink: #f5f7fa;
+  --color-surface: #ffffff;
+  --color-surface-2: #eef1f6;
+  --color-line: #dce3ec;
+  --color-muted: #55637a;
+  --color-accent: #0f9d8f;
+  --color-accent-2: #4c6fe8;
+  --color-fg: #131c28;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-fg);
+  font-family: var(--font-display);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #06110f;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
