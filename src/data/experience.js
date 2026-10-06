@@ -12,12 +12,12 @@ export const experience = [
   },
   {
     role: 'Senior Full Stack Developer',
-    company: 'Silkmala | Part-time Contractor',
-    period: 'Apr 2025 – May 2026',
+    company: 'Silkmala Designer | Full-time Contract | Remote',
+    period: 'Apr 2025 – Present',
     points: [
-      'Built and maintained full stack features using React.js, Next.js, Node.js, and database integrations.',
-      'Developed responsive user interfaces and reusable components for scalable web applications.',
-      'Worked on API integrations, authentication flows, performance improvements, and production fixes.',
+      'Built and maintain the live Silkmala eCommerce platform end to end using React, Node.js, Express.js, and MongoDB.',
+      'Implemented OTP mobile login, product catalog, cart, and inquiry-based checkout flows.',
+      'Developed an admin dashboard for managing products, inquiries, and orders.',
     ],
   },
   {

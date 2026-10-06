@@ -32,7 +32,7 @@ export default function About() {
     <section id="about" className="mx-auto max-w-6xl scroll-mt-20 px-6 py-20">
       <SectionHeading eyebrow="About Me" title="8+ Years of Turning Complex Ideas into Reliable Software" center={false} />
 
-      <motion.p
+      <motion.div
         initial={{ opacity: 0, y: 14 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
@@ -41,7 +41,7 @@ export default function About() {
       >
        <p className='mb-4'>Senior Full Stack Developer with over 8 years of experience building scalable web and mobile applications using React.js, Next.js, TypeScript, Node.js, and React Native. I specialize in creating clean frontend architectures, secure REST API integrations, authentication flows, responsive interfaces, and production-ready digital products.</p>
        <p>My experience includes working on e-commerce platforms, POS solutions, enterprise applications, SaaS products, and mobile apps. I enjoy solving complex problems, improving application performance, writing maintainable code, and building software that is reliable, scalable, and easy for teams to maintain.</p> 
-      </motion.p>
+      </motion.div>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {focusAreas.map(({ icon: Icon, title, text }, i) => (

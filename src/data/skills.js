@@ -16,8 +16,11 @@ import {
   SiVercel,
   SiGithub,
   SiPostman,
-  SiGithubactions
+  SiGithubactions,
+  SiPrisma,
+  SiOllama,
 } from 'react-icons/si'
+import { TbBrandOpenai } from 'react-icons/tb'
 import {  
   FaMobileAlt,
   FaAws,
@@ -41,6 +44,9 @@ export const skills = [
   { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
   { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
   { name: 'Firebase', icon: SiFirebase, color: '#FFCA28' },
+  { name: 'Prisma', icon: SiPrisma, color: '#FFFFFF' },
+  { name: 'OpenAI API', icon: TbBrandOpenai, color: '#FFFFFF' },
+  { name: 'Ollama', icon: SiOllama, color: '#FFFFFF' },
   { name: 'Docker', icon: SiDocker, color: '#2496ED' },
   { name: 'AWS S3', icon: FaAws, color: '#FF9900' },
   { name: 'Vercel', icon: SiVercel, color: '#FFFFFF' },

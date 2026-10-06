@@ -7,7 +7,7 @@ const ease = [0.22, 1, 0.36, 1]
 export default function Projects() {
   return (
     <section id="projects" className="mx-auto max-w-6xl scroll-mt-20 px-6 py-20">
-      <SectionHeading eyebrow="Selected Work" title="Enterprise Projects Delivered Over 8+ Years" />
+      <SectionHeading eyebrow="Selected Work" title="Featured Projects" />
 
       <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, i) => (
