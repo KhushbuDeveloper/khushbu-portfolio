@@ -11,7 +11,6 @@ export default defineConfig({
           // vendor libs cached separately from app code, so repeat visits
           // only re-download the (tiny) app bundle after content edits
           react: ['react', 'react-dom'],
-          motion: ['framer-motion'],
         },
       },
     },

@@ -3,39 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Khushbu Patel | Senior Full Stack Developer | React.js • Next.js • Node.js • React Native</title>
+    <title>Khushbu Patel | Senior Full Stack Developer</title>
     <meta
       name="description"
-      content="Senior Full Stack Developer with 8+ years of experience building scalable web and mobile products using React.js, Next.js, TypeScript, Node.js, and React Native. Experienced in e-commerce, multilingual voice and POS, and enterprise platforms with strong skills in frontend architecture, REST APIs, authentication, testing, and CI/CD."
+      content="Senior Full Stack Developer specializing in React.js, Next.js, TypeScript, Node.js, React Native and AI-powered applications. Open to remote opportunities."
     />
     <meta
       name="keywords"
-      content="React, Next.js, Node.js, TypeScript, MongoDB, PostgreSQL, MERN, Portfolio, Senior Full Stack Developer, Khushbu Patel"
+      content="Khushbu Patel, Senior Full Stack Developer, React Developer, Next.js Developer, TypeScript, Node.js, React Native, AI Applications, Remote Developer, Portfolio"
     />
     <meta name="author" content="Khushbu Patel" />
-    <meta name="creator" content="Khushbu Patel" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="canonical" href="https://khushbu-portfolio.vercel.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://khushbu-portfolio.vercel.app/" />
+    <meta property="og:site_name" content="Khushbu Patel" />
     <meta property="og:title" content="Khushbu Patel | Senior Full Stack Developer" />
     <meta
       property="og:description"
-      content="Building scalable web applications using React, Next.js, Node.js, TypeScript, and AI technologies."
+      content="Senior Full Stack Developer specializing in React.js, Next.js, TypeScript, Node.js, React Native and AI-powered applications. Open to remote opportunities."
     />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/apple-touch-icon.png" />
+    <meta property="og:image" content="https://khushbu-portfolio.vercel.app/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Khushbu Patel — Senior Full Stack Developer" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Khushbu Patel | Senior Full Stack Developer" />
+    <meta
+      name="twitter:description"
+      content="Senior Full Stack Developer specializing in React.js, Next.js, TypeScript, Node.js, React Native and AI-powered applications. Open to remote opportunities."
+    />
+    <meta name="twitter:image" content="https://khushbu-portfolio.vercel.app/og-image.png" />
+    <meta name="twitter:image:alt" content="Khushbu Patel — Senior Full Stack Developer" />
+
+    <!-- Structured data for search engines -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Khushbu Patel",
+        "jobTitle": "Senior Full Stack Developer",
+        "description": "Senior Full Stack Developer with 8+ years of experience building web, mobile, SaaS, e-commerce and AI-powered applications.",
+        "url": "https://khushbu-portfolio.vercel.app/",
+        "image": "https://khushbu-portfolio.vercel.app/og-image.png",
+        "sameAs": ["https://www.linkedin.com/in/khushbupatel-fullstack", "https://github.com/KhushbuDeveloper"],
+        "knowsAbout": [
+          "React.js",
+          "Next.js",
+          "TypeScript",
+          "JavaScript",
+          "Node.js",
+          "Express.js",
+          "React Native",
+          "MongoDB",
+          "PostgreSQL",
+          "AWS",
+          "AI Integration"
+        ]
+      }
+    </script>
+
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Apply the theme before first paint: saved choice, else the OS preference -->
+    <script>
+      ;(function () {
+        var theme
+        try {
+          theme = localStorage.getItem('theme')
+        } catch (e) {}
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        }
+        document.documentElement.dataset.theme = theme
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', theme === 'dark' ? '#060a18' : '#ffffff')
+      })()
+    </script>
   </head>
   <body>
-    <script>
-      // Runs before paint so the saved theme never flashes the wrong colors
-      document.documentElement.dataset.theme = localStorage.getItem('theme') || 'dark'
-    </script>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <noscript>
+      <p style="padding: 2rem; font-family: sans-serif">
+        Khushbu Patel — Senior Full Stack Developer. Please enable JavaScript to view this site, or connect on
+        <a href="https://www.linkedin.com/in/khushbupatel-fullstack">LinkedIn</a>.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+/* Dark mode follows the data-theme attribute set before first paint (see index.html) */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ---------- Theme tokens ---------- */
+:root {
+  color-scheme: light;
+  --background: #ffffff;
+  --background-soft: #f7f8fc;
+  --foreground: #0b1533;
+  --card: #ffffff;
+  --card-foreground: #0b1533;
+  --border: #e6e9f2;
+  --border-strong: #d5dbea;
+  --muted: #f3f5fb;
+  --muted-foreground: #556079;
+  --primary: #3457f5;
+  --primary-foreground: #ffffff;
+  --primary-soft: #eef2ff;
+  --primary-text: #2f4fe0;
+  --accent: #7b4dff;
+  --cta: #0f1b3d;
+  --cta-foreground: #ffffff;
+  --glow: rgba(84, 110, 255, 0.16);
+  --glow-strong: rgba(123, 77, 255, 0.14);
+  --shadow-card: 0 1px 2px rgba(15, 27, 61, 0.04), 0 4px 16px -6px rgba(15, 27, 61, 0.08);
+  --shadow-card-hover: 0 2px 4px rgba(15, 27, 61, 0.04), 0 18px 40px -16px rgba(52, 87, 245, 0.25);
+  --nav-bg: rgba(255, 255, 255, 0.78);
+  --success: #16a34a;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #060a18;
+  --background-soft: #080d1f;
+  --foreground: #e9edf8;
+  --card: #0c1226;
+  --card-foreground: #e9edf8;
+  --border: #19213b;
+  --border-strong: #26304f;
+  --muted: #10172e;
+  --muted-foreground: #9aa5c2;
+  --primary: #4f74ff;
+  --primary-foreground: #ffffff;
+  --primary-soft: rgba(79, 116, 255, 0.12);
+  --primary-text: #8aa2ff;
+  --accent: #9b6bff;
+  --cta: #3f66f6;
+  --cta-foreground: #ffffff;
+  --glow: rgba(79, 116, 255, 0.32);
+  --glow-strong: rgba(155, 107, 255, 0.28);
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 18px 40px -18px rgba(79, 116, 255, 0.45);
+  --nav-bg: rgba(6, 10, 24, 0.72);
+  --success: #22c55e;
+}
+
+/* Expose tokens as Tailwind utilities: bg-background, text-muted-foreground, border-border… */
+@theme inline {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --color-background: var(--background);
+  --color-background-soft: var(--background-soft);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-text: var(--primary-text);
+  --color-accent: var(--accent);
+  --color-cta: var(--cta);
+  --color-cta-foreground: var(--cta-foreground);
+  --color-success: var(--success);
+  --shadow-card: var(--shadow-card);
+  --shadow-card-hover: var(--shadow-card-hover);
+}
+
+/* ---------- Base ---------- */
+/* Layered so Tailwind utilities (e.g. focus:outline-none on inputs) can still override */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+  }
+}
+
+/* Smooth color crossfade only while the theme is switching, so hover
+   transitions elsewhere keep their own timing */
+.theme-transition,
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow, opacity !important;
+  transition-duration: 350ms !important;
+  transition-timing-function: ease !important;
+}
+
+/* ---------- Helpers ---------- */
+@layer components {
+  .text-gradient {
+    background: linear-gradient(95deg, var(--primary) 10%, var(--accent) 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .dot-grid {
+    background-image: radial-gradient(circle, var(--border-strong) 1px, transparent 1.4px);
+    background-size: 22px 22px;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    z-index: 100;
+    padding: 0.6rem 1rem;
+    border-radius: 0.6rem;
+    background: var(--cta);
+    color: var(--cta-foreground);
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+  .skip-link:focus {
+    top: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
