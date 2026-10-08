@@ -12,7 +12,7 @@ const rise = (delay: number) => ({
 
 export function Hero() {
   return (
-    <section id="home" aria-labelledby="hero-title" className="relative overflow-hidden pt-28 pb-6 lg:pt-36 lg:pb-8">
+    <section id="home" aria-labelledby="hero-title" className="relative overflow-hidden pt-24 pb-2 sm:pt-28 sm:pb-6 lg:pt-36 lg:pb-8">
       {/* ambient glow behind the whole hero */}
       <div
         aria-hidden="true"
@@ -20,7 +20,7 @@ export function Hero() {
       />
 
       <div className="relative mx-auto w-full max-w-[1240px] px-5 sm:px-8 lg:px-10">
-        <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-4">
+        <div className="grid items-center gap-6 sm:gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-4">
           <div className="max-w-[660px]">
             <m.p
               {...rise(0)}

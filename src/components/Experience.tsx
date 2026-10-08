@@ -10,7 +10,7 @@ import { SectionHeading } from './SectionHeading'
 
 export function Experience() {
   return (
-    <Section id="experience" labelledBy="experience-title" className="bg-background-soft">
+    <Section id="experience" labelledBy="experience-title">
       <Reveal>
         <SectionHeading
           label="Experience"

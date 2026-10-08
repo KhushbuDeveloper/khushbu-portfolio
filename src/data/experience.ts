@@ -12,7 +12,7 @@ export const experience: Experience[] = [
   {
     role: 'Senior Frontend Developer',
     company: 'AI-Powered Voice POS Platform',
-    engagement: 'Independent Contractor',
+    engagement: 'Independent Contractor · Part-time',
     period: 'Jun 2026 – Present',
     current: true,
     description: 'Developing an AI-powered multilingual Voice POS platform using React Native and TypeScript.',
@@ -21,9 +21,11 @@ export const experience: Experience[] = [
   {
     role: 'Senior Full Stack Developer',
     company: 'Silkmala',
-    period: 'Apr 2025 – May 2026',
+    engagement: 'Full-time',
+    period: 'Apr 2025 – Present',
+    current: true,
     description:
-      'Built a scalable e-commerce platform with cart, admin dashboard, authentication and responsive interfaces.',
+      'Building a scalable e-commerce platform with cart, admin dashboard, authentication and responsive interfaces.',
     technologies: ['React.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
   },
   {

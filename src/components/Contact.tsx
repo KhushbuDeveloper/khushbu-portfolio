@@ -6,9 +6,8 @@ import { Section } from './Section'
 
 export function Contact() {
   return (
-    // No top padding: Education above shares this background, so its bottom padding
-    // already provides the gap — this keeps the space above and below the panel equal
-    <Section id="contact" labelledBy="contact-title" className="pt-0!">
+    // Last section: also needs bottom padding so the gap to the footer matches the gap above
+    <Section id="contact" labelledBy="contact-title" className="pb-14 sm:pb-16 lg:pb-20">
       <Reveal>
         <div className="relative overflow-hidden rounded-3xl border border-border bg-card px-6 py-14 text-center shadow-card sm:px-10 sm:py-16">
           {/* soft glow + dotted texture behind the CTA */}
