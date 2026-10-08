@@ -93,20 +93,23 @@ export function Navbar() {
 
         <div className="flex items-center gap-2.5">
           <ThemeToggle />
-          <div className="hidden lg:block">
-            <Button
-              href={site.resume}
-              download
-              variant="outline"
-              size="sm"
-              icon={<Download size={14} />}
-              iconPosition="start"
-              className="border-primary/50 text-primary-text"
-            >
-              Download Resume
-            </Button>
-          </div>
-          <div className="hidden xl:block">
+          {site.resume && (
+            <div className="hidden lg:block">
+              <Button
+                href={site.resume}
+                download
+                variant="outline"
+                size="sm"
+                icon={<Download size={14} />}
+                iconPosition="start"
+                className="border-primary/50 text-primary-text"
+              >
+                Download Resume
+              </Button>
+            </div>
+          )}
+          {/* with the resume button present there's only room for this one from xl up */}
+          <div className={site.resume ? 'hidden xl:block' : 'hidden lg:block'}>
             <Button href="#contact" variant="cta" size="sm" icon={<ArrowRight size={14} />}>
               Let's Connect
             </Button>
@@ -157,15 +160,17 @@ export function Navbar() {
               <Button href="#contact" onClick={() => setOpen(false)} icon={<ArrowRight size={16} />}>
                 Let's Connect
               </Button>
-              <Button
-                href={site.resume}
-                download
-                variant="outline"
-                icon={<Download size={16} />}
-                iconPosition="start"
-              >
-                Download Resume
-              </Button>
+              {site.resume && (
+                <Button
+                  href={site.resume}
+                  download
+                  variant="outline"
+                  icon={<Download size={16} />}
+                  iconPosition="start"
+                >
+                  Download Resume
+                </Button>
+              )}
             </div>
           </m.div>
         )}

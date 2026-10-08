@@ -12,12 +12,12 @@ npm run preview    # serve the production build locally
 npm run typecheck  # TypeScript only
 ```
 
-## Before publishing
+## Site settings
 
 | What | Where |
 | --- | --- |
-| **Resume PDF**: the Download Resume and View Full Resume buttons link to it | put it at `public/resume.pdf` |
-| **Production domain** (currently `khushbu-portfolio.vercel.app`) | `src/data/site.ts`, `index.html` (canonical, Open Graph, Twitter, JSON-LD), `public/robots.txt`, `public/sitemap.xml` |
+| **Resume PDF**: the Download Resume and View Full Resume buttons are hidden for now. To show them, put the PDF at `public/resume.pdf` and set `resume: '/resume.pdf'`. Use a version without your phone number or email, because anyone can download it. | `src/data/site.ts` |
+| **Production domain** (`khushbu-portfolio-ivory.vercel.app`) | `src/data/site.ts`, `index.html` (canonical, Open Graph, Twitter, JSON-LD), `public/robots.txt`, `public/sitemap.xml` |
 
 ## Editing content
 

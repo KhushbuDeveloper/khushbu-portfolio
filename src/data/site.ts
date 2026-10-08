@@ -2,11 +2,12 @@
 export const site = {
   name: 'Khushbu Patel',
   title: 'Senior Full Stack Developer',
-  // TODO: replace with the final production domain (also update index.html, robots.txt, sitemap.xml)
-  url: 'https://khushbu-portfolio.vercel.app',
+  // Production domain (also used in index.html, robots.txt, sitemap.xml)
+  url: 'https://khushbu-portfolio-ivory.vercel.app',
   availability: 'Open to Remote Opportunities',
-  // Drop the PDF at public/resume.pdf
-  resume: '/resume.pdf',
+  // Resume buttons are hidden while this is undefined. To show them, put the PDF
+  // at public/resume.pdf and set this to '/resume.pdf'.
+  resume: undefined as string | undefined,
   linkedin: 'https://www.linkedin.com/in/khushbupatel-fullstack',
   github: 'https://github.com/KhushbuDeveloper',
   stackLine: ['React.js', 'Next.js', 'TypeScript', 'Node.js', 'React Native'],

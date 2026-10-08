@@ -52,9 +52,11 @@ export function Contact() {
               >
                 GitHub
               </Button>
-              <Button href={site.resume} download variant="outline" icon={<Download size={16} />} iconPosition="start">
-                Download Resume
-              </Button>
+              {site.resume && (
+                <Button href={site.resume} download variant="outline" icon={<Download size={16} />} iconPosition="start">
+                  Download Resume
+                </Button>
+              )}
             </div>
           </div>
         </div>

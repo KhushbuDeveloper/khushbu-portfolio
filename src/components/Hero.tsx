@@ -50,9 +50,11 @@ export function Hero() {
               <Button href="#projects" icon={<ArrowRight size={16} />}>
                 View My Work
               </Button>
-              <Button href={site.resume} download variant="outline" icon={<Download size={16} />} iconPosition="start">
-                Download Resume
-              </Button>
+              {site.resume && (
+                <Button href={site.resume} download variant="outline" icon={<Download size={16} />} iconPosition="start">
+                  Download Resume
+                </Button>
+              )}
             </m.div>
 
             <m.p {...rise(0.32)} className="mt-6 flex items-center gap-2.5 text-[13px] font-medium text-muted-foreground">

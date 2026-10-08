@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://khushbu-portfolio.vercel.app/sitemap.xml
+Sitemap: https://khushbu-portfolio-ivory.vercel.app/sitemap.xml

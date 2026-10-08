@@ -17,9 +17,18 @@ export function Experience() {
           title="Professional Experience"
           id="experience-title"
           action={
-            <Button href={site.resume} target="_blank" rel="noopener" variant="outline" size="sm" icon={<ArrowRight size={14} />}>
-              View Full Resume
-            </Button>
+            site.resume && (
+              <Button
+                href={site.resume}
+                target="_blank"
+                rel="noopener"
+                variant="outline"
+                size="sm"
+                icon={<ArrowRight size={14} />}
+              >
+                View Full Resume
+              </Button>
+            )
           }
         />
       </Reveal>
